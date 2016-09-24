@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  background: yellowgreen;
+}
+
+img {
+  max-height: 200px;
+  max-width: 200px;
+}
+
+
+table#tableContainer {
+  margin-top:2em;
+}
+#tableContainer {
+  color:white;
+  margin: 0 auto;
+  height: 45em;
+  width: 55em;
+  background-image: url('http://l7.alamy.com/zooms/8221059b5010410793f628628144f0ff/blackjack-table-setup-c4w608.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  box-shadow: 0 0 1px blue,
+              0 0 2px blue,
+              0 0 3px blue,
+              0 0 4px black,
+              0 0 5px black,
+              0 0 20px black;
+}
+
+td#dealer,
+#dealer h1,
+#player h1,
+td#player
+  {
+  margin: 0;
+  padding:0;
+  border:none;
+}
+
+tr#playerContainer {
+  height:40em;
+}
+
+tr#buttonContainer {
+  background:skyblue;
+}
+
+tr#dealerCardContainer, tr#playerCardContainer {
+  height:35em;
+}
+
+table#playerHandTable, table#dealerHandTable {
+  margin: 0 auto;
+}
