@@ -14,7 +14,7 @@ let Deck =  [
     {10: '0B1CC7FYwQnMwU0FST29jR3VZbk0'},{10: '0B1CC7FYwQnMwcW5aTDNfYnc5dGM'},{10: '0B1CC7FYwQnMwWG1zb3EwZ2Z0Rlk'},{10: '0B1CC7FYwQnMwNmNhbFNvZVdudkU'},
     {10: '0B1CC7FYwQnMwejg5VC1Fd3FsbDA'},{10: '0B1CC7FYwQnMwN1pkeWRPeU9maXc'},{10: '0B1CC7FYwQnMwMEk4SFRUY2xXOEU'},{10: '0B1CC7FYwQnMwZWVHaklfVV9yTEU'},
     {10: '0B1CC7FYwQnMwRTFEZHJ3dGlNOWs'},{10: '0B1CC7FYwQnMwZnQ1dU1GT2l2YUE'},{10: '0B1CC7FYwQnMwTTJrNE5GMVhlNzQ'},{10: '0B1CC7FYwQnMwNFA2OWxmcTJzcUE'},
-    {1: '0B1CC7FYwQnMweUtpWWMzbWIyYUE'},{1: '0B1CC7FYwQnMwRVU2VmxNNldGeFE'},{1: '0B1CC7FYwQnMwX0pTNkwtRkxPR1U'},{1: '0B1CC7FYwQnMwZjUxNGhmXzg3SGc'}
+    {11: '0B1CC7FYwQnMweUtpWWMzbWIyYUE'},{11: '0B1CC7FYwQnMwRVU2VmxNNldGeFE'},{11: '0B1CC7FYwQnMwX0pTNkwtRkxPR1U'},{11: '0B1CC7FYwQnMwZjUxNGhmXzg3SGc'}
   ]
 
 let _newDeck = _.shuffle(Deck)
@@ -50,15 +50,7 @@ class CardsStore extends EventEmitter {
           break;
 
         case "RESET":
-          _mainDeck = _.shuffle(Deck);
-          _game = {
-            deck: _mainDeck,
-            dealer: [],
-            player: [],
-            points: '',
-            stand:  '',
-            winner: ''
-          }
+          this.reset();
           console.log("Reset game deck length: ", _game.deck.length);
           this.emit('CHANGE');
           break;
@@ -98,27 +90,44 @@ class CardsStore extends EventEmitter {
     getStand() {
        let value = 0;
           return _game.stand = _game.dealer.map(card => {
-          for (var key in card) {
-           value = parseInt(key) 
-            } 
-            return value
-            }).reduce((a,b) => (a+b));
-    }
+            for (var key in card) {
+             value = parseInt(key) 
+              } 
+              return value
+              }).reduce((a,b) => (a+b));
+        }
 
     getPoints() {
       let value = 0;
-      return _game.points = _game.player.map(card => {
+      let totalPoints = _game.points = _game.player.map(card => {
         for(var key in card) {
           value = parseInt(key)
         }
-        return value
-      }).reduce((a,b) => (a+b));
+        return value;
+      });
+      console.log("HERE!",totalPoints);
+      return totalPoints.reduce((a,b) => (a+b))
+      
+      
     }
 
     calcWinner() {
-      _game.points > 21 ? setTimeout (() => (alert("You Lose!") ),1000) : null; 
+    
+      _game.points > 21 ? setTimeout (() => (alert("YOU LOSE!") ),1000) : null; 
       _game.stand > 21 ? setTimeout(() => (alert("YOU WIN!") ), 1000) : null;
+    
     }
+  reset() {
+    _mainDeck = _.shuffle(Deck);
+    _game = {
+      deck: _mainDeck,
+      dealer: [],
+      player: [],
+      points: '',
+      stand:  '',
+      winner: ''
+    }
+  }
 
 
  } //end of class

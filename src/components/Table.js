@@ -63,7 +63,7 @@ export default class Table extends Component {
                 <button className="btn btn-primary btn-lg" onClick={this.start}>Start</button>
               </td>
               <td className="col-xs-2" id="resetBtnContainer">
-                <button className="btn btn-danger btn-lg" onClick={this.reset}>Reset</button>
+                <button  id="resetBtn" className="btn btn-danger btn-lg" onClick={this.reset}>Reset</button>
               </td>
               <td className="col-xs-4" id='dealer'><Dealer/></td>
             </tr>
