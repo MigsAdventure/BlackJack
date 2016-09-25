@@ -14,6 +14,14 @@ img {
   max-width: 200px;
 }
 
+td {
+  padding: 0;
+}
+
+td#resetBtnContainer, td#startBtnContainer {
+  padding:0;
+  border:0;
+}
 
 table#tableContainer {
   margin-top:2em;
@@ -60,3 +68,129 @@ tr#dealerCardContainer, tr#playerCardContainer {
 table#playerHandTable, table#dealerHandTable {
   margin: 0 auto;
 }
+
+td #card0{
+  position: absolute;
+  bottom: 30em;
+  left: 5em;
+}
+
+ td #card1 {
+  position:absolute;
+  bottom:30em;
+  left:7em;
+}
+
+td #card2 {
+  position:absolute;
+  bottom:30em;
+  left:9em;
+
+}
+
+td #card3 {
+  position: absolute;
+  bottom: 30em;
+  left:11em;
+}
+
+td #card4 {
+  position: absolute;
+  bottom:30em;
+  left:13em;
+}
+
+td #card5 {
+  position: absolute;
+  bottom:30em;
+  left:15em;
+}
+
+td #card6{
+  position: absolute;
+  bottom: 10em;
+  left: 5em;
+}
+
+ td #card7 {
+  position:absolute;
+  bottom:10em;
+  left:7em;
+}
+
+td #card8 {
+  position:absolute;
+  bottom:10em;
+  left:9em;
+
+}
+
+td #card9 {
+  position: absolute;
+  bottom: 10em;
+  left:11em;
+}
+
+td #card10 {
+  position: absolute;
+  bottom:10em;
+  left:13em;
+}
+
+td #card11 {
+  position: absolute;
+  bottom:10em;
+  left:15em;
+}
+
+td #deal0{
+  position: absolute;
+  bottom: 30em;
+  right: 5em;
+}
+
+ td #deal1 {
+  position:absolute;
+  bottom:30em;
+  right:7em;
+}
+
+td #deal2 {
+  position:absolute;
+  bottom:30em;
+  right:9em;
+
+}
+
+td #deal3 {
+  position: absolute;
+  bottom: 30em;
+  right:11em;
+}
+
+td #deal4 {
+  position: absolute;
+  bottom:30em;
+  right:13em;
+}
+
+td #deal5 {
+  position: absolute;
+  bottom:30em;
+  right:15em;
+}
+
+td #deal6{
+  position: absolute;
+  bottom: 10em;
+  right: 5em;
+}
+
+ td #deal7 {
+  position:absolute;
+  bottom:10em;
+  right:7em;
+}
+
+
+

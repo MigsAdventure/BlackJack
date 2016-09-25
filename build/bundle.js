@@ -54,7 +54,7 @@
 
 	__webpack_require__(172);
 
-	var _Table = __webpack_require__(181);
+	var _Table = __webpack_require__(180);
 
 	var _Table2 = _interopRequireDefault(_Table);
 
@@ -21434,15 +21434,17 @@
 
 	'use strict';
 
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 	var _AppDispatcher = __webpack_require__(173);
 
 	var _AppDispatcher2 = _interopRequireDefault(_AppDispatcher);
 
 	var _events = __webpack_require__(177);
-
-	var _Deck = __webpack_require__(178);
-
-	var _Deck2 = _interopRequireDefault(_Deck);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -21452,9 +21454,22 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _player = [];
-	var _dealer = [];
-	var _deck = _Deck2.default;
+	var _ = __webpack_require__(178);
+
+	var Deck = [{ 2: '0B1CC7FYwQnMwN0stN01ZQms3S1E' }, { 2: '0B1CC7FYwQnMwNmxPYTltblNzZjA' }, { 2: '0B1CC7FYwQnMwbjZLWXV3SHc5cDA' }, { 2: '0B1CC7FYwQnMwWElxYTdJN1laR2s' }, { 3: '0B1CC7FYwQnMwaFBnUmNLcjFLS0U' }, { 3: '0B1CC7FYwQnMwOHZiLWhIcTBLNkk' }, { 3: '0B1CC7FYwQnMwYmdRbi1PYjVfbG8' }, { 3: '0B1CC7FYwQnMwY284WjQ3bEt1MDA' }, { 4: '0B1CC7FYwQnMwRHFOWWdJcHJ5MXM' }, { 4: '0B1CC7FYwQnMwZ1RFT0t0a0xjYmc' }, { 4: '0B1CC7FYwQnMwQ1pvS0h0b0dZVWc' }, { 4: '0B1CC7FYwQnMwazlHVTUxaFFPMW8' }, { 5: '0B1CC7FYwQnMwZUdvbndncG5tb2s' }, { 5: '0B1CC7FYwQnMwYUU0YTEtVFMxQms' }, { 5: '0B1CC7FYwQnMwN1YydUdYX2NaMWM' }, { 5: '0B1CC7FYwQnMwRy1Rc0pQMWN0UzA' }, { 6: '0B1CC7FYwQnMwa3NuV3BGSlZsMkk' }, { 6: '0B1CC7FYwQnMwQzNWdVFhVkgwSm8' }, { 6: '0B1CC7FYwQnMwaEt6VHhib1BFMFU' }, { 6: '0B1CC7FYwQnMwWjJORV9zcU03MHc' }, { 7: '0B1CC7FYwQnMwT1JpSUpCN0xlamc' }, { 7: '0B1CC7FYwQnMwb0JvQThMUDBpdEk' }, { 7: '0B1CC7FYwQnMwWDdsSVVqdGwwejA' }, { 7: '0B1CC7FYwQnMwX2NGbGVUaHlIWkU' }, { 8: '0B1CC7FYwQnMwTHRpSHlTVEpKS1U' }, { 8: '0B1CC7FYwQnMwYVVXYlRNR0hFVGc' }, { 8: '0B1CC7FYwQnMwMVhkVWFHS01rMTQ' }, { 8: '0B1CC7FYwQnMwNENyanlNX1VmX2s' }, { 9: '0B1CC7FYwQnMwdnEyQVF1eGFnSlE' }, { 9: '0B1CC7FYwQnMwbmRtakRyLUhZMEk' }, { 9: '0B1CC7FYwQnMwUTVYc29YcnVkdDA' }, { 9: '0B1CC7FYwQnMwbnJMc0NSRkNxWm8' }, { 10: '0B1CC7FYwQnMwU0FST29jR3VZbk0' }, { 10: '0B1CC7FYwQnMwcW5aTDNfYnc5dGM' }, { 10: '0B1CC7FYwQnMwWG1zb3EwZ2Z0Rlk' }, { 10: '0B1CC7FYwQnMwNmNhbFNvZVdudkU' }, { 10: '0B1CC7FYwQnMwejg5VC1Fd3FsbDA' }, { 10: '0B1CC7FYwQnMwN1pkeWRPeU9maXc' }, { 10: '0B1CC7FYwQnMwMEk4SFRUY2xXOEU' }, { 10: '0B1CC7FYwQnMwZWVHaklfVV9yTEU' }, { 10: '0B1CC7FYwQnMwRTFEZHJ3dGlNOWs' }, { 10: '0B1CC7FYwQnMwZnQ1dU1GT2l2YUE' }, { 10: '0B1CC7FYwQnMwTTJrNE5GMVhlNzQ' }, { 10: '0B1CC7FYwQnMwNFA2OWxmcTJzcUE' }, { 1: '0B1CC7FYwQnMweUtpWWMzbWIyYUE' }, { 1: '0B1CC7FYwQnMwRVU2VmxNNldGeFE' }, { 1: '0B1CC7FYwQnMwX0pTNkwtRkxPR1U' }, { 1: '0B1CC7FYwQnMwZjUxNGhmXzg3SGc' }];
+
+	var _newDeck = _.shuffle(Deck);
+	var _mainDeck = _newDeck;
+	var _points = '';
+	var _winner = '';
+	var _game = {
+	  deck: _mainDeck,
+	  dealer: [],
+	  player: [],
+	  points: '',
+	  stand: '',
+	  winner: null
+	};
 
 	var CardsStore = function (_EventEmitter) {
 	  _inherits(CardsStore, _EventEmitter);
@@ -21464,13 +21479,111 @@
 
 	    var _this = _possibleConstructorReturn(this, (CardsStore.__proto__ || Object.getPrototypeOf(CardsStore)).call(this));
 
-	    _AppDispatcher2.default.register(function (action) {}); //end of appDispatcher register
+	    _AppDispatcher2.default.register(function (action) {
+	      var type = action.type;
+
+	      switch (type) {
+	        case "START":
+	          _game = {
+	            dealer: [_mainDeck.pop(), _mainDeck.pop()],
+	            player: [_mainDeck.pop(), _mainDeck.pop()]
+	          };
+	          _game.points = _this.getPoints();
+	          _game.stand = _this.getStand();
+	          console.log("deck size Start: ", _mainDeck.length);
+	          _this.emit('CHANGE');
+	          break;
+
+	        case "RESET":
+	          _mainDeck = _.shuffle(Deck);
+	          _game = {
+	            deck: _mainDeck,
+	            dealer: [],
+	            player: [],
+	            points: '',
+	            stand: '',
+	            winner: ''
+	          };
+	          console.log("Reset game deck length: ", _game.deck.length);
+	          _this.emit('CHANGE');
+	          break;
+	        case "HIT":
+	          var value = 0;
+	          _game.player.push(_mainDeck.pop());
+	          _game.points = _this.getPoints();
+	          _this.calcWinner();
+	          _this.emit('CHANGE');
+	          break;
+
+	        case "STAND":
+	          _game.dealer.push(_mainDeck.pop());
+	          _game.stand = _this.getStand();
+	          _this.calcWinner();
+	          _this.emit('CHANGE');
+	          break;
+	      } //end of switch
+	    }); //end of appDispatcher register
 	    return _this;
 	  } //end of constructor
 
 
+	  _createClass(CardsStore, [{
+	    key: 'startListening',
+	    value: function startListening(cb) {
+	      this.on('CHANGE', cb);
+	    }
+	  }, {
+	    key: 'stopListening',
+	    value: function stopListening(cb) {
+	      this.removeListener('CHANGE', cb);
+	    }
+	  }, {
+	    key: 'getGame',
+	    value: function getGame(piece) {
+	      return _game[piece];
+	    }
+	  }, {
+	    key: 'getStand',
+	    value: function getStand() {
+	      var value = 0;
+	      return _game.stand = _game.dealer.map(function (card) {
+	        for (var key in card) {
+	          value = parseInt(key);
+	        }
+	        return value;
+	      }).reduce(function (a, b) {
+	        return a + b;
+	      });
+	    }
+	  }, {
+	    key: 'getPoints',
+	    value: function getPoints() {
+	      var value = 0;
+	      return _game.points = _game.player.map(function (card) {
+	        for (var key in card) {
+	          value = parseInt(key);
+	        }
+	        return value;
+	      }).reduce(function (a, b) {
+	        return a + b;
+	      });
+	    }
+	  }, {
+	    key: 'calcWinner',
+	    value: function calcWinner() {
+	      _game.points > 21 ? setTimeout(function () {
+	        return alert("You Lose!");
+	      }, 1000) : null;
+	      _game.stand > 21 ? setTimeout(function () {
+	        return alert("YOU WIN!");
+	      }, 1000) : null;
+	    }
+	  }]);
+
 	  return CardsStore;
 	}(_events.EventEmitter); //end of class
+
+	exports.default = new CardsStore();
 
 /***/ },
 /* 173 */
@@ -22108,27 +22221,6 @@
 
 /***/ },
 /* 178 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _ = __webpack_require__(179);
-
-	var Deck = {
-	  wholeDeck: [[2, '0B1CC7FYwQnMwN0stN01ZQms3S1E'], [2, '0B1CC7FYwQnMwNmxPYTltblNzZjA'], [2, '0B1CC7FYwQnMwbjZLWXV3SHc5cDA'], [2, '0B1CC7FYwQnMwWElxYTdJN1laR2s'], [3, '0B1CC7FYwQnMwaFBnUmNLcjFLS0U'], [3, '0B1CC7FYwQnMwOHZiLWhIcTBLNkk'], [3, '0B1CC7FYwQnMwYmdRbi1PYjVfbG8'], [3, '0B1CC7FYwQnMwY284WjQ3bEt1MDA'], [4, '0B1CC7FYwQnMwRHFOWWdJcHJ5MXM'], [4, '0B1CC7FYwQnMwZ1RFT0t0a0xjYmc'], [4, '0B1CC7FYwQnMwQ1pvS0h0b0dZVWc'], [4, '0B1CC7FYwQnMwazlHVTUxaFFPMW8'], [5, '0B1CC7FYwQnMwZUdvbndncG5tb2s'], [5, '0B1CC7FYwQnMwYUU0YTEtVFMxQms'], [5, '0B1CC7FYwQnMwN1YydUdYX2NaMWM'], [5, '0B1CC7FYwQnMwRy1Rc0pQMWN0UzA'], [6, '0B1CC7FYwQnMwa3NuV3BGSlZsMkk'], [6, '0B1CC7FYwQnMwQzNWdVFhVkgwSm8'], [6, '0B1CC7FYwQnMwaEt6VHhib1BFMFU'], [6, '0B1CC7FYwQnMwWjJORV9zcU03MHc'], [7, '0B1CC7FYwQnMwT1JpSUpCN0xlamc'], [7, '0B1CC7FYwQnMwb0JvQThMUDBpdEk'], [7, '0B1CC7FYwQnMwWDdsSVVqdGwwejA'], [7, '0B1CC7FYwQnMwX2NGbGVUaHlIWkU'], [8, '0B1CC7FYwQnMwTHRpSHlTVEpKS1U'], [8, '0B1CC7FYwQnMwYVVXYlRNR0hFVGc'], [8, '0B1CC7FYwQnMwMVhkVWFHS01rMTQ'], [8, '0B1CC7FYwQnMwNENyanlNX1VmX2s'], [9, '0B1CC7FYwQnMwdnEyQVF1eGFnSlE'], [9, '0B1CC7FYwQnMwbmRtakRyLUhZMEk'], [9, '0B1CC7FYwQnMwUTVYc29YcnVkdDA'], [9, '0B1CC7FYwQnMwbnJMc0NSRkNxWm8'], [10, '0B1CC7FYwQnMwU0FST29jR3VZbk0'], [10, '0B1CC7FYwQnMwcW5aTDNfYnc5dGM'], [10, '0B1CC7FYwQnMwWG1zb3EwZ2Z0Rlk'], [10, '0B1CC7FYwQnMwNmNhbFNvZVdudkU'], [10, '0B1CC7FYwQnMwejg5VC1Fd3FsbDA'], [10, '0B1CC7FYwQnMwN1pkeWRPeU9maXc'], [10, '0B1CC7FYwQnMwMEk4SFRUY2xXOEU'], [10, '0B1CC7FYwQnMwZWVHaklfVV9yTEU'], [10, '0B1CC7FYwQnMwRTFEZHJ3dGlNOWs'], [10, '0B1CC7FYwQnMwZnQ1dU1GT2l2YUE'], [10, '0B1CC7FYwQnMwTTJrNE5GMVhlNzQ'], [10, '0B1CC7FYwQnMwNFA2OWxmcTJzcUE'], [1, '0B1CC7FYwQnMweUtpWWMzbWIyYUE'], [1, '0B1CC7FYwQnMwRVU2VmxNNldGeFE'], [1, '0B1CC7FYwQnMwX0pTNkwtRkxPR1U'], [1, '0B1CC7FYwQnMwZjUxNGhmXzg3SGc']]
-	};
-
-	Deck = _.shuffle(Deck);
-	console.log(Deck);
-
-	module.exports = Deck;
-	// if variable card is an element of the wholeDeck array:
-	// `http://drive.google.com/uc?export=view&id=${card[1]}` --> link to card image.
-	// card[0] is point worth of the card
-	// {import Cards from '../Cards.js'} inside the store, to modularize this huge chunk of code in a separate Cards.js file (not necessary)
-
-/***/ },
-/* 179 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(global, module) {/**
@@ -39027,10 +39119,10 @@
 	  }
 	}.call(this));
 
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(180)(module)))
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(179)(module)))
 
 /***/ },
-/* 180 */
+/* 179 */
 /***/ function(module, exports) {
 
 	module.exports = function(module) {
@@ -39046,7 +39138,7 @@
 
 
 /***/ },
-/* 181 */
+/* 180 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -39061,13 +39153,21 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Dealer = __webpack_require__(182);
+	var _Dealer = __webpack_require__(181);
 
 	var _Dealer2 = _interopRequireDefault(_Dealer);
 
-	var _Player = __webpack_require__(183);
+	var _Player = __webpack_require__(184);
 
 	var _Player2 = _interopRequireDefault(_Player);
+
+	var _CardsStore = __webpack_require__(172);
+
+	var _CardsStore2 = _interopRequireDefault(_CardsStore);
+
+	var _CardActions = __webpack_require__(185);
+
+	var _CardActions2 = _interopRequireDefault(_CardActions);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -39083,12 +39183,60 @@
 	  function Table() {
 	    _classCallCheck(this, Table);
 
-	    return _possibleConstructorReturn(this, (Table.__proto__ || Object.getPrototypeOf(Table)).apply(this, arguments));
+	    var _this = _possibleConstructorReturn(this, (Table.__proto__ || Object.getPrototypeOf(Table)).call(this));
+
+	    _this.state = {
+	      player: _CardsStore2.default.getGame('player'),
+	      playerPoints: _CardsStore2.default.getGame('points'),
+	      dealerPoints: '',
+	      cardsInDeck: ''
+	    };
+
+	    _this._onChange = _this._onChange.bind(_this);
+	    return _this;
 	  }
 
 	  _createClass(Table, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      _CardsStore2.default.startListening(this._onChange);
+	    }
+	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      _CardsStore2.default.stopListening(this._onChange);
+	    }
+	  }, {
+	    key: '_onChange',
+	    value: function _onChange() {
+	      this.setState({
+	        player: _CardsStore2.default.getGame('player')
+	      });
+	    }
+	  }, {
+	    key: 'start',
+	    value: function start() {
+	      _CardActions2.default.start();
+	    }
+	  }, {
+	    key: 'hitMe',
+	    value: function hitMe() {
+	      _CardActions2.default.hit();
+	    }
+	  }, {
+	    key: 'stand',
+	    value: function stand() {
+	      _CardActions2.default.stand();
+	    }
+	  }, {
+	    key: 'reset',
+	    value: function reset() {
+	      _CardActions2.default.reset();
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
+	      console.log(this.state.playerPoints);
 	      return _react2.default.createElement(
 	        'div',
 	        null,
@@ -39108,33 +39256,52 @@
 	              { className: 'row', id: 'playerContainer' },
 	              _react2.default.createElement(
 	                'td',
-	                { className: 'col-xs-6', id: 'dealer' },
-	                _react2.default.createElement(_Dealer2.default, null)
+	                { className: 'col-xs-4', id: 'player' },
+	                _react2.default.createElement(_Player2.default, null)
 	              ),
 	              _react2.default.createElement(
 	                'td',
-	                { className: 'col-xs-6', id: 'player' },
-	                _react2.default.createElement(_Player2.default, null)
+	                { className: 'col-xs-2', id: 'startBtnContainer' },
+	                _react2.default.createElement(
+	                  'button',
+	                  { className: 'btn btn-primary btn-lg', onClick: this.start },
+	                  'Start'
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'td',
+	                { className: 'col-xs-2', id: 'resetBtnContainer' },
+	                _react2.default.createElement(
+	                  'button',
+	                  { className: 'btn btn-danger btn-lg', onClick: this.reset },
+	                  'Reset'
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'td',
+	                { className: 'col-xs-4', id: 'dealer' },
+	                _react2.default.createElement(_Dealer2.default, null)
 	              )
 	            ),
 	            _react2.default.createElement(
 	              'tr',
 	              { className: 'row', id: 'buttonContainer' },
+	              _react2.default.createElement('td', { className: 'col-xs-4' }),
 	              _react2.default.createElement(
 	                'td',
-	                { className: 'text-right' },
+	                { className: 'text-center col-xs-2' },
 	                _react2.default.createElement(
 	                  'button',
-	                  { className: 'btn btn-primary btn-lg' },
+	                  { className: 'btn btn-primary btn-lg', onClick: this.hitMe },
 	                  'Hit'
 	                )
 	              ),
 	              _react2.default.createElement(
 	                'td',
-	                { className: 'text-left' },
+	                { className: 'text-center col-xs-2' },
 	                _react2.default.createElement(
 	                  'button',
-	                  { className: 'btn btn-success btn-lg' },
+	                  { className: 'btn btn-success btn-lg', onClick: this.stand },
 	                  'Stand'
 	                )
 	              )
@@ -39153,7 +39320,7 @@
 	exports.default = Table;
 
 /***/ },
-/* 182 */
+/* 181 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -39167,6 +39334,14 @@
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _CardsStore = __webpack_require__(172);
+
+	var _CardsStore2 = _interopRequireDefault(_CardsStore);
+
+	var _uuid = __webpack_require__(182);
+
+	var _uuid2 = _interopRequireDefault(_uuid);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -39182,19 +39357,50 @@
 	  function Dealer() {
 	    _classCallCheck(this, Dealer);
 
-	    return _possibleConstructorReturn(this, (Dealer.__proto__ || Object.getPrototypeOf(Dealer)).apply(this, arguments));
+	    var _this = _possibleConstructorReturn(this, (Dealer.__proto__ || Object.getPrototypeOf(Dealer)).call(this));
+
+	    _this.state = {
+	      dealCards: _CardsStore2.default.getGame('dealer'),
+	      stand: _CardsStore2.default.getGame('stand')
+	    };
+	    _this._onChange = _this._onChange.bind(_this);
+	    return _this;
 	  }
 
 	  _createClass(Dealer, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      _CardsStore2.default.startListening(this._onChange);
+	    }
+	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      _CardsStore2.default.stopListening(this._onChange);
+	    }
+	  }, {
+	    key: '_onChange',
+	    value: function _onChange() {
+	      this.setState({
+	        dealCards: _CardsStore2.default.getGame('dealer'),
+	        stand: _CardsStore2.default.getGame('stand')
+	      });
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
+	      var _state = this.state;
+	      var dealCards = _state.dealCards;
+	      var stand = _state.stand;
+
+	      var backFace = "http://images.penguinmagic.com/images/products/original/8006b.jpg";
 	      return _react2.default.createElement(
 	        'div',
 	        null,
 	        _react2.default.createElement(
 	          'h1',
 	          null,
-	          'Dealer'
+	          'Dealer: ',
+	          stand
 	        ),
 	        _react2.default.createElement(
 	          'table',
@@ -39205,16 +39411,24 @@
 	            _react2.default.createElement(
 	              'tr',
 	              { className: 'row', id: 'dealerCardContainer' },
-	              _react2.default.createElement(
-	                'td',
-	                { id: 'dealerHide' },
-	                _react2.default.createElement('img', { src: 'http://byhandinvitations.com/wp-content/uploads/2012/02/POKER-CARD-BACK.jpg', alt: '' })
-	              ),
-	              _react2.default.createElement(
-	                'td',
-	                { id: 'dealerShow' },
-	                _react2.default.createElement('img', { src: 'http://byhandinvitations.com/wp-content/uploads/2012/02/POKER-CARD-BACK.jpg', alt: '' })
-	              )
+	              dealCards.map(function (card, i) {
+	                for (var key in card) {
+	                  var img = card[key];
+	                }
+	                if (i !== 0) {
+	                  return _react2.default.createElement(
+	                    'td',
+	                    { id: 'deal' + i, key: i },
+	                    _react2.default.createElement('img', { className: 'dealerCards', src: 'http://drive.google.com/uc?export=view&id=' + img, alt: '' })
+	                  );
+	                } else {
+	                  return _react2.default.createElement(
+	                    'td',
+	                    { id: 'deal' + i, key: i },
+	                    _react2.default.createElement('img', { className: 'dealerCards', src: backFace, alt: '' })
+	                  );
+	                }
+	              })
 	            )
 	          )
 	        )
@@ -39223,12 +39437,241 @@
 	  }]);
 
 	  return Dealer;
-	}(_react.Component);
+	}(_react.Component); //end of render
+
 
 	exports.default = Dealer;
 
 /***/ },
+/* 182 */
+/***/ function(module, exports, __webpack_require__) {
+
+	//     uuid.js
+	//
+	//     Copyright (c) 2010-2012 Robert Kieffer
+	//     MIT License - http://opensource.org/licenses/mit-license.php
+
+	// Unique ID creation requires a high quality random # generator.  We feature
+	// detect to determine the best RNG source, normalizing to a function that
+	// returns 128-bits of randomness, since that's what's usually required
+	var _rng = __webpack_require__(183);
+
+	// Maps for number <-> hex string conversion
+	var _byteToHex = [];
+	var _hexToByte = {};
+	for (var i = 0; i < 256; i++) {
+	  _byteToHex[i] = (i + 0x100).toString(16).substr(1);
+	  _hexToByte[_byteToHex[i]] = i;
+	}
+
+	// **`parse()` - Parse a UUID into it's component bytes**
+	function parse(s, buf, offset) {
+	  var i = (buf && offset) || 0, ii = 0;
+
+	  buf = buf || [];
+	  s.toLowerCase().replace(/[0-9a-f]{2}/g, function(oct) {
+	    if (ii < 16) { // Don't overflow!
+	      buf[i + ii++] = _hexToByte[oct];
+	    }
+	  });
+
+	  // Zero out remaining bytes if string was short
+	  while (ii < 16) {
+	    buf[i + ii++] = 0;
+	  }
+
+	  return buf;
+	}
+
+	// **`unparse()` - Convert UUID byte array (ala parse()) into a string**
+	function unparse(buf, offset) {
+	  var i = offset || 0, bth = _byteToHex;
+	  return  bth[buf[i++]] + bth[buf[i++]] +
+	          bth[buf[i++]] + bth[buf[i++]] + '-' +
+	          bth[buf[i++]] + bth[buf[i++]] + '-' +
+	          bth[buf[i++]] + bth[buf[i++]] + '-' +
+	          bth[buf[i++]] + bth[buf[i++]] + '-' +
+	          bth[buf[i++]] + bth[buf[i++]] +
+	          bth[buf[i++]] + bth[buf[i++]] +
+	          bth[buf[i++]] + bth[buf[i++]];
+	}
+
+	// **`v1()` - Generate time-based UUID**
+	//
+	// Inspired by https://github.com/LiosK/UUID.js
+	// and http://docs.python.org/library/uuid.html
+
+	// random #'s we need to init node and clockseq
+	var _seedBytes = _rng();
+
+	// Per 4.5, create and 48-bit node id, (47 random bits + multicast bit = 1)
+	var _nodeId = [
+	  _seedBytes[0] | 0x01,
+	  _seedBytes[1], _seedBytes[2], _seedBytes[3], _seedBytes[4], _seedBytes[5]
+	];
+
+	// Per 4.2.2, randomize (14 bit) clockseq
+	var _clockseq = (_seedBytes[6] << 8 | _seedBytes[7]) & 0x3fff;
+
+	// Previous uuid creation time
+	var _lastMSecs = 0, _lastNSecs = 0;
+
+	// See https://github.com/broofa/node-uuid for API details
+	function v1(options, buf, offset) {
+	  var i = buf && offset || 0;
+	  var b = buf || [];
+
+	  options = options || {};
+
+	  var clockseq = options.clockseq !== undefined ? options.clockseq : _clockseq;
+
+	  // UUID timestamps are 100 nano-second units since the Gregorian epoch,
+	  // (1582-10-15 00:00).  JSNumbers aren't precise enough for this, so
+	  // time is handled internally as 'msecs' (integer milliseconds) and 'nsecs'
+	  // (100-nanoseconds offset from msecs) since unix epoch, 1970-01-01 00:00.
+	  var msecs = options.msecs !== undefined ? options.msecs : new Date().getTime();
+
+	  // Per 4.2.1.2, use count of uuid's generated during the current clock
+	  // cycle to simulate higher resolution clock
+	  var nsecs = options.nsecs !== undefined ? options.nsecs : _lastNSecs + 1;
+
+	  // Time since last uuid creation (in msecs)
+	  var dt = (msecs - _lastMSecs) + (nsecs - _lastNSecs)/10000;
+
+	  // Per 4.2.1.2, Bump clockseq on clock regression
+	  if (dt < 0 && options.clockseq === undefined) {
+	    clockseq = clockseq + 1 & 0x3fff;
+	  }
+
+	  // Reset nsecs if clock regresses (new clockseq) or we've moved onto a new
+	  // time interval
+	  if ((dt < 0 || msecs > _lastMSecs) && options.nsecs === undefined) {
+	    nsecs = 0;
+	  }
+
+	  // Per 4.2.1.2 Throw error if too many uuids are requested
+	  if (nsecs >= 10000) {
+	    throw new Error('uuid.v1(): Can\'t create more than 10M uuids/sec');
+	  }
+
+	  _lastMSecs = msecs;
+	  _lastNSecs = nsecs;
+	  _clockseq = clockseq;
+
+	  // Per 4.1.4 - Convert from unix epoch to Gregorian epoch
+	  msecs += 12219292800000;
+
+	  // `time_low`
+	  var tl = ((msecs & 0xfffffff) * 10000 + nsecs) % 0x100000000;
+	  b[i++] = tl >>> 24 & 0xff;
+	  b[i++] = tl >>> 16 & 0xff;
+	  b[i++] = tl >>> 8 & 0xff;
+	  b[i++] = tl & 0xff;
+
+	  // `time_mid`
+	  var tmh = (msecs / 0x100000000 * 10000) & 0xfffffff;
+	  b[i++] = tmh >>> 8 & 0xff;
+	  b[i++] = tmh & 0xff;
+
+	  // `time_high_and_version`
+	  b[i++] = tmh >>> 24 & 0xf | 0x10; // include version
+	  b[i++] = tmh >>> 16 & 0xff;
+
+	  // `clock_seq_hi_and_reserved` (Per 4.2.2 - include variant)
+	  b[i++] = clockseq >>> 8 | 0x80;
+
+	  // `clock_seq_low`
+	  b[i++] = clockseq & 0xff;
+
+	  // `node`
+	  var node = options.node || _nodeId;
+	  for (var n = 0; n < 6; n++) {
+	    b[i + n] = node[n];
+	  }
+
+	  return buf ? buf : unparse(b);
+	}
+
+	// **`v4()` - Generate random UUID**
+
+	// See https://github.com/broofa/node-uuid for API details
+	function v4(options, buf, offset) {
+	  // Deprecated - 'format' argument, as supported in v1.2
+	  var i = buf && offset || 0;
+
+	  if (typeof(options) == 'string') {
+	    buf = options == 'binary' ? new Array(16) : null;
+	    options = null;
+	  }
+	  options = options || {};
+
+	  var rnds = options.random || (options.rng || _rng)();
+
+	  // Per 4.4, set bits for version and `clock_seq_hi_and_reserved`
+	  rnds[6] = (rnds[6] & 0x0f) | 0x40;
+	  rnds[8] = (rnds[8] & 0x3f) | 0x80;
+
+	  // Copy bytes to buffer, if provided
+	  if (buf) {
+	    for (var ii = 0; ii < 16; ii++) {
+	      buf[i + ii] = rnds[ii];
+	    }
+	  }
+
+	  return buf || unparse(rnds);
+	}
+
+	// Export public API
+	var uuid = v4;
+	uuid.v1 = v1;
+	uuid.v4 = v4;
+	uuid.parse = parse;
+	uuid.unparse = unparse;
+
+	module.exports = uuid;
+
+
+/***/ },
 /* 183 */
+/***/ function(module, exports) {
+
+	/* WEBPACK VAR INJECTION */(function(global) {
+	var rng;
+
+	var crypto = global.crypto || global.msCrypto; // for IE 11
+	if (crypto && crypto.getRandomValues) {
+	  // WHATWG crypto-based RNG - http://wiki.whatwg.org/wiki/Crypto
+	  // Moderately fast, high quality
+	  var _rnds8 = new Uint8Array(16);
+	  rng = function whatwgRNG() {
+	    crypto.getRandomValues(_rnds8);
+	    return _rnds8;
+	  };
+	}
+
+	if (!rng) {
+	  // Math.random()-based (RNG)
+	  //
+	  // If all else fails, use Math.random().  It's fast, but is of unspecified
+	  // quality.
+	  var  _rnds = new Array(16);
+	  rng = function() {
+	    for (var i = 0, r; i < 16; i++) {
+	      if ((i & 0x03) === 0) r = Math.random() * 0x100000000;
+	      _rnds[i] = r >>> ((i & 0x03) << 3) & 0xff;
+	    }
+
+	    return _rnds;
+	  };
+	}
+
+	module.exports = rng;
+
+
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
+
+/***/ },
+/* 184 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -39242,6 +39685,14 @@
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _CardsStore = __webpack_require__(172);
+
+	var _CardsStore2 = _interopRequireDefault(_CardsStore);
+
+	var _uuid = __webpack_require__(182);
+
+	var _uuid2 = _interopRequireDefault(_uuid);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -39257,19 +39708,50 @@
 	  function Player() {
 	    _classCallCheck(this, Player);
 
-	    return _possibleConstructorReturn(this, (Player.__proto__ || Object.getPrototypeOf(Player)).apply(this, arguments));
+	    var _this = _possibleConstructorReturn(this, (Player.__proto__ || Object.getPrototypeOf(Player)).call(this));
+
+	    _this.state = {
+	      playerCards: _CardsStore2.default.getGame('player'),
+	      points: _CardsStore2.default.getGame('points')
+	    };
+	    _this._onChange = _this._onChange.bind(_this);
+	    return _this;
 	  }
 
 	  _createClass(Player, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      _CardsStore2.default.startListening(this._onChange);
+	    }
+	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      _CardsStore2.default.stopListening(this._onChange);
+	    }
+	  }, {
+	    key: '_onChange',
+	    value: function _onChange() {
+	      this.setState({
+	        playerCards: _CardsStore2.default.getGame('player'),
+	        points: _CardsStore2.default.getGame('points')
+	      });
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
+	      var _state = this.state;
+	      var playerCards = _state.playerCards;
+	      var points = _state.points;
+
 	      return _react2.default.createElement(
 	        'div',
 	        null,
 	        _react2.default.createElement(
 	          'h1',
 	          null,
-	          'Player'
+	          'Player: ',
+	          points,
+	          ' '
 	        ),
 	        _react2.default.createElement(
 	          'table',
@@ -39280,16 +39762,22 @@
 	            _react2.default.createElement(
 	              'tr',
 	              { className: 'row', id: 'playerCardContainer' },
-	              _react2.default.createElement(
-	                'td',
-	                { id: 'player', className: 'text-center' },
-	                _react2.default.createElement('img', { src: 'http://byhandinvitations.com/wp-content/uploads/2012/02/POKER-CARD-BACK.jpg', alt: '' })
-	              ),
-	              _react2.default.createElement(
-	                'td',
-	                { id: 'player', className: 'text-center' },
-	                _react2.default.createElement('img', { src: 'http://byhandinvitations.com/wp-content/uploads/2012/02/POKER-CARD-BACK.jpg', alt: '' })
-	              )
+	              playerCards.map(function (card, i) {
+	                for (var key in card) {
+
+	                  var img = card[key];
+	                }
+	                return _react2.default.createElement(
+	                  'td',
+	                  { id: 'card' + i, key: i },
+	                  _react2.default.createElement('img', { className: 'playerCards', src: 'http://drive.google.com/uc?export=view&id=' + img, alt: '' })
+	                );
+	              }
+
+	              //end of first map
+	              //end of secondmap
+	              ) //end of return
+
 	            )
 	          )
 	        )
@@ -39303,6 +39791,52 @@
 
 
 	exports.default = Player;
+
+/***/ },
+/* 185 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _AppDispatcher = __webpack_require__(173);
+
+	var _AppDispatcher2 = _interopRequireDefault(_AppDispatcher);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var CardActions = {
+	  hit: function hit(card) {
+	    _AppDispatcher2.default.dispatch({
+	      type: 'HIT'
+	    });
+	  },
+	  stand: function stand(skip) {
+	    _AppDispatcher2.default.dispatch({
+	      type: 'STAND'
+	    });
+	  },
+	  reset: function reset(_reset) {
+	    _AppDispatcher2.default.dispatch({
+	      type: 'RESET'
+	    });
+	  },
+	  start: function start(_start) {
+	    _AppDispatcher2.default.dispatch({
+	      type: 'START'
+	    });
+	  },
+	  dealer: function dealer(_dealer) {
+	    _AppDispatcher2.default.dispatch({
+	      type: 'DEALER'
+	    });
+	  }
+	};
+
+	exports.default = CardActions;
 
 /***/ }
 /******/ ]);

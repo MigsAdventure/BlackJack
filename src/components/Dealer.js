@@ -1,20 +1,58 @@
 import React, {Component} from 'react';
+import CardsStore from '../stores/CardsStore';
+import uuid from 'uuid';
 
 export default class Dealer extends Component {
-  render() {
-    return (
-      <div>
-        <h1>Dealer</h1>
-        <table id="dealerHandTable">
-          <tbody>
-            <tr className='row' id="dealerCardContainer">
-          <td id="dealerHide"><img src="http://byhandinvitations.com/wp-content/uploads/2012/02/POKER-CARD-BACK.jpg" alt=""/></td>
-          <td id="dealerShow"><img src="http://byhandinvitations.com/wp-content/uploads/2012/02/POKER-CARD-BACK.jpg" alt=""/></td>
-        </tr>
-          </tbody>
-        </table>
-        
-      </div>
-    )
+  constructor() {
+    super();
+    this.state = {
+      dealCards: CardsStore.getGame('dealer'),
+      stand: CardsStore.getGame('stand')
+    }
+    this._onChange = this._onChange.bind(this);
   }
-}
+ 
+  componentDidMount() {
+    CardsStore.startListening(this._onChange);
+  }
+
+  componentWillUnmount() {
+    CardsStore.stopListening(this._onChange);
+  }
+
+  _onChange() {
+    this.setState({
+      dealCards: CardsStore.getGame('dealer'),
+      stand: CardsStore.getGame('stand')
+    });
+  }
+
+  render() {
+    const {dealCards, stand} = this.state;
+    let backFace = "http://images.penguinmagic.com/images/products/original/8006b.jpg";
+      return (
+        <div>
+          <h1>Dealer: {stand}</h1>
+          <table id="dealerHandTable">
+            <tbody>
+              <tr className='row' id="dealerCardContainer">
+            { dealCards.map((card, i) => {
+              for (var key in card) {
+                var img = card[key];
+              }
+              if (i !== 0) {
+                return <td id={`deal${i}`} key={i}><img  className="dealerCards" src={`http://drive.google.com/uc?export=view&id=${img}`} alt=""/></td> 
+              } else {
+                return <td id={`deal${i}`} key={i}><img  className="dealerCards" src={backFace} alt=""/></td> 
+              }
+            }
+              
+            )}
+          </tr>
+            </tbody>
+          </table>
+          
+        </div>
+      )
+    }
+  } //end of render
