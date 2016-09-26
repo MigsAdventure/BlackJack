@@ -43,7 +43,7 @@ export default class Dealer extends Component {
               if (i !== 0) {
                 return <td id={`deal${i}`} key={i}><img  className="dealerCards" src={`http://drive.google.com/uc?export=view&id=${img}`} alt=""/></td> 
               } else {
-                return <td id={`deal${i}`} key={i}><img  className="dealerCards" src={backFace} alt=""/></td> 
+                return <td id={`deal${i}`} key={i}><img id="backFace" className="dealerCards" src={backFace} alt={`http://drive.google.com/uc?export=view&id=${img}`}/></td> 
               }
             }
               

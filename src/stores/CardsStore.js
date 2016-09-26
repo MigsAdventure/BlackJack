@@ -63,8 +63,10 @@ class CardsStore extends EventEmitter {
           break;
 
         case "STAND" :
-          _game.dealer.push(_mainDeck.pop());
-          _game.stand = this.getStand();
+          while (_game.stand < 17 ) {
+            _game.dealer.push(_mainDeck.pop());
+             _game.stand = this.getStand();
+          }
           this.calcWinner();
           this.emit('CHANGE');
           break;
@@ -105,14 +107,15 @@ class CardsStore extends EventEmitter {
         }
         return value;
       });
+      var sum= 0;
       for (var i = 0; i <totalPoints.length; i++) {
-        if (totalPoints[i] === 11 && (_game.points + 11) > 21) {
+        sum += totalPoints[i];
+        if (totalPoints[i] === 11 && (sum + 11) > 21) {
           totalPoints[i] = 1;
-          console.log("changed to 1: ",totalPoints)
         }
-      }
+      } return sum;
 
-      return totalPoints.reduce((a,b) => (a+b))
+     
       
       
     }

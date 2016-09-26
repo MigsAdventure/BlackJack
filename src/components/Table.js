@@ -42,6 +42,8 @@ export default class Table extends Component {
 
   stand() {
     CardActions.stand();
+    let faceElement = document.getElementById('backFace');
+    faceElement.src = faceElement.alt;
   }
 
   reset () {
