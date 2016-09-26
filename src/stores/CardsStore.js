@@ -14,7 +14,7 @@ let Deck =  [
     {10: '0B1CC7FYwQnMwU0FST29jR3VZbk0'},{10: '0B1CC7FYwQnMwcW5aTDNfYnc5dGM'},{10: '0B1CC7FYwQnMwWG1zb3EwZ2Z0Rlk'},{10: '0B1CC7FYwQnMwNmNhbFNvZVdudkU'},
     {10: '0B1CC7FYwQnMwejg5VC1Fd3FsbDA'},{10: '0B1CC7FYwQnMwN1pkeWRPeU9maXc'},{10: '0B1CC7FYwQnMwMEk4SFRUY2xXOEU'},{10: '0B1CC7FYwQnMwZWVHaklfVV9yTEU'},
     {10: '0B1CC7FYwQnMwRTFEZHJ3dGlNOWs'},{10: '0B1CC7FYwQnMwZnQ1dU1GT2l2YUE'},{10: '0B1CC7FYwQnMwTTJrNE5GMVhlNzQ'},{10: '0B1CC7FYwQnMwNFA2OWxmcTJzcUE'},
-    {11: '0B1CC7FYwQnMweUtpWWMzbWIyYUE'},{11: '0B1CC7FYwQnMwRVU2VmxNNldGeFE'},{11: '0B1CC7FYwQnMwX0pTNkwtRkxPR1U'},{11: '0B1CC7FYwQnMwZjUxNGhmXzg3SGc'}
+    {11: '0B1CC7FYwQnMweUtpWWMzbWIyYUE'},{11: '0B1CC7FYwQnMwRVU2VmxNNldGeFE'},{11: '0B1CC7FYwQnMwX0pTNkwtRkxPR1U'},{11: '0B1CC7FYwQnMwZjUxNGhmXzg3SGc'},{11: '0B1CC7FYwQnMwZjUxNGhmXzg3SGc'},{11: '0B1CC7FYwQnMwZjUxNGhmXzg3SGc'},{11: '0B1CC7FYwQnMwZjUxNGhmXzg3SGc'},{11: '0B1CC7FYwQnMwZjUxNGhmXzg3SGc'},{11: '0B1CC7FYwQnMwZjUxNGhmXzg3SGc'},{11: '0B1CC7FYwQnMwZjUxNGhmXzg3SGc'},{11: '0B1CC7FYwQnMwZjUxNGhmXzg3SGc'},{11: '0B1CC7FYwQnMwZjUxNGhmXzg3SGc'},{11: '0B1CC7FYwQnMwZjUxNGhmXzg3SGc'},{11: '0B1CC7FYwQnMwZjUxNGhmXzg3SGc'},{11: '0B1CC7FYwQnMwZjUxNGhmXzg3SGc'},{11: '0B1CC7FYwQnMwZjUxNGhmXzg3SGc'},{11: '0B1CC7FYwQnMwZjUxNGhmXzg3SGc'},{11: '0B1CC7FYwQnMwZjUxNGhmXzg3SGc'},{11: '0B1CC7FYwQnMwZjUxNGhmXzg3SGc'},{11: '0B1CC7FYwQnMwZjUxNGhmXzg3SGc'},{11: '0B1CC7FYwQnMwZjUxNGhmXzg3SGc'},{11: '0B1CC7FYwQnMwZjUxNGhmXzg3SGc'},{11: '0B1CC7FYwQnMwZjUxNGhmXzg3SGc'},{11: '0B1CC7FYwQnMwZjUxNGhmXzg3SGc'}
   ]
 
 let _newDeck = _.shuffle(Deck)
@@ -108,15 +108,23 @@ class CardsStore extends EventEmitter {
         return value;
       });
       var sum= 0;
+      var aceCount = 0;
       for (var i = 0; i <totalPoints.length; i++) {
-        sum += totalPoints[i];
-        if (totalPoints[i] === 11 && (sum + 11) > 21) {
-          totalPoints[i] = 1;
+        if (totalPoints[i] === 11) {
+          aceCount++;
         }
-      } return sum;
-
-     
-      
+        if ( totalPoints[i] === 11 && (sum + 11) > 21) {
+          sum += 1;
+        } else {
+          sum += totalPoints[i];
+        }
+      } 
+      while(aceCount > 0 && sum > 21) {
+        sum -= 10;
+        aceCount--;
+      }
+      console.log('1:sum : ',sum)
+      return sum;   
       
     }
 
