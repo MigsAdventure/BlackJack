@@ -27,6 +27,10 @@ table#tableContainer {
   margin-top:2em;
 }
 #tableContainer {
+  position: relative;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
   color:white;
   margin: 0 auto;
   height: 45em;
@@ -69,35 +73,62 @@ table#playerHandTable, table#dealerHandTable {
   margin: 0 auto;
 }
 
+td img {
+  height: 10em;
+}
+
 td #card0{
   position: absolute;
-  bottom: 30em;
-  left: 5em;
+  bottom:17em;
+  left:1em;
 }
+
+td #card0 img {
+  height: 8em;
+  transform: rotate(58deg);
+}
+
 
  td #card1 {
   position:absolute;
-  bottom:30em;
-  left:7em;
+  bottom:11em;
+  left:5em;
 }
+
+
+td#card1 img {
+  height: 10em;
+  transform: rotate(39deg)
+
+}
+
 
 td #card2 {
   position:absolute;
-  bottom:30em;
-  left:9em;
+  bottom:7em;
+  left:14em;
 
+}
+
+td #card2 img {
+  transform: rotate(23deg);
 }
 
 td #card3 {
   position: absolute;
-  bottom: 30em;
-  left:11em;
+  bottom: 6em;
+  right:23em;
 }
+
 
 td #card4 {
   position: absolute;
-  bottom:30em;
-  left:13em;
+  bottom:8em;
+  right:12em;
+}
+
+td #card4 img {
+  transform: rotate(-26deg);
 }
 
 td #card5 {

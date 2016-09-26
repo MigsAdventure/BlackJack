@@ -54,7 +54,7 @@
 
 	__webpack_require__(172);
 
-	var _Table = __webpack_require__(180);
+	var _Table = __webpack_require__(181);
 
 	var _Table2 = _interopRequireDefault(_Table);
 
@@ -21454,7 +21454,7 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _ = __webpack_require__(178);
+	var _ = __webpack_require__(179);
 
 	var Deck = [{ 2: '0B1CC7FYwQnMwN0stN01ZQms3S1E' }, { 2: '0B1CC7FYwQnMwNmxPYTltblNzZjA' }, { 2: '0B1CC7FYwQnMwbjZLWXV3SHc5cDA' }, { 2: '0B1CC7FYwQnMwWElxYTdJN1laR2s' }, { 3: '0B1CC7FYwQnMwaFBnUmNLcjFLS0U' }, { 3: '0B1CC7FYwQnMwOHZiLWhIcTBLNkk' }, { 3: '0B1CC7FYwQnMwYmdRbi1PYjVfbG8' }, { 3: '0B1CC7FYwQnMwY284WjQ3bEt1MDA' }, { 4: '0B1CC7FYwQnMwRHFOWWdJcHJ5MXM' }, { 4: '0B1CC7FYwQnMwZ1RFT0t0a0xjYmc' }, { 4: '0B1CC7FYwQnMwQ1pvS0h0b0dZVWc' }, { 4: '0B1CC7FYwQnMwazlHVTUxaFFPMW8' }, { 5: '0B1CC7FYwQnMwZUdvbndncG5tb2s' }, { 5: '0B1CC7FYwQnMwYUU0YTEtVFMxQms' }, { 5: '0B1CC7FYwQnMwN1YydUdYX2NaMWM' }, { 5: '0B1CC7FYwQnMwRy1Rc0pQMWN0UzA' }, { 6: '0B1CC7FYwQnMwa3NuV3BGSlZsMkk' }, { 6: '0B1CC7FYwQnMwQzNWdVFhVkgwSm8' }, { 6: '0B1CC7FYwQnMwaEt6VHhib1BFMFU' }, { 6: '0B1CC7FYwQnMwWjJORV9zcU03MHc' }, { 7: '0B1CC7FYwQnMwT1JpSUpCN0xlamc' }, { 7: '0B1CC7FYwQnMwb0JvQThMUDBpdEk' }, { 7: '0B1CC7FYwQnMwWDdsSVVqdGwwejA' }, { 7: '0B1CC7FYwQnMwX2NGbGVUaHlIWkU' }, { 8: '0B1CC7FYwQnMwTHRpSHlTVEpKS1U' }, { 8: '0B1CC7FYwQnMwYVVXYlRNR0hFVGc' }, { 8: '0B1CC7FYwQnMwMVhkVWFHS01rMTQ' }, { 8: '0B1CC7FYwQnMwNENyanlNX1VmX2s' }, { 9: '0B1CC7FYwQnMwdnEyQVF1eGFnSlE' }, { 9: '0B1CC7FYwQnMwbmRtakRyLUhZMEk' }, { 9: '0B1CC7FYwQnMwUTVYc29YcnVkdDA' }, { 9: '0B1CC7FYwQnMwbnJMc0NSRkNxWm8' }, { 10: '0B1CC7FYwQnMwU0FST29jR3VZbk0' }, { 10: '0B1CC7FYwQnMwcW5aTDNfYnc5dGM' }, { 10: '0B1CC7FYwQnMwWG1zb3EwZ2Z0Rlk' }, { 10: '0B1CC7FYwQnMwNmNhbFNvZVdudkU' }, { 10: '0B1CC7FYwQnMwejg5VC1Fd3FsbDA' }, { 10: '0B1CC7FYwQnMwN1pkeWRPeU9maXc' }, { 10: '0B1CC7FYwQnMwMEk4SFRUY2xXOEU' }, { 10: '0B1CC7FYwQnMwZWVHaklfVV9yTEU' }, { 10: '0B1CC7FYwQnMwRTFEZHJ3dGlNOWs' }, { 10: '0B1CC7FYwQnMwZnQ1dU1GT2l2YUE' }, { 10: '0B1CC7FYwQnMwTTJrNE5GMVhlNzQ' }, { 10: '0B1CC7FYwQnMwNFA2OWxmcTJzcUE' }, { 11: '0B1CC7FYwQnMweUtpWWMzbWIyYUE' }, { 11: '0B1CC7FYwQnMwRVU2VmxNNldGeFE' }, { 11: '0B1CC7FYwQnMwX0pTNkwtRkxPR1U' }, { 11: '0B1CC7FYwQnMwZjUxNGhmXzg3SGc' }];
 
@@ -21557,7 +21557,13 @@
 	        }
 	        return value;
 	      });
-	      console.log("HERE!", totalPoints);
+	      for (var i = 0; i < totalPoints.length; i++) {
+	        if (totalPoints[i] === 11 && _game.points + 11 > 21) {
+	          totalPoints[i] = 1;
+	          console.log("changed to 1: ", totalPoints);
+	        }
+	      }
+
 	      return totalPoints.reduce(function (a, b) {
 	        return a + b;
 	      });
@@ -21565,7 +21571,6 @@
 	  }, {
 	    key: 'calcWinner',
 	    value: function calcWinner() {
-
 	      _game.points > 21 ? setTimeout(function () {
 	        return alert("YOU LOSE!");
 	      }, 1000) : null;
@@ -22228,7 +22233,8 @@
 
 
 /***/ },
-/* 178 */
+/* 178 */,
+/* 179 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(global, module) {/**
@@ -39127,10 +39133,10 @@
 	  }
 	}.call(this));
 
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(179)(module)))
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(180)(module)))
 
 /***/ },
-/* 179 */
+/* 180 */
 /***/ function(module, exports) {
 
 	module.exports = function(module) {
@@ -39146,7 +39152,7 @@
 
 
 /***/ },
-/* 180 */
+/* 181 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -39161,11 +39167,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Dealer = __webpack_require__(181);
+	var _Dealer = __webpack_require__(182);
 
 	var _Dealer2 = _interopRequireDefault(_Dealer);
 
-	var _Player = __webpack_require__(184);
+	var _Player = __webpack_require__(183);
 
 	var _Player2 = _interopRequireDefault(_Player);
 
@@ -39173,7 +39179,7 @@
 
 	var _CardsStore2 = _interopRequireDefault(_CardsStore);
 
-	var _CardActions = __webpack_require__(185);
+	var _CardActions = __webpack_require__(187);
 
 	var _CardActions2 = _interopRequireDefault(_CardActions);
 
@@ -39328,7 +39334,7 @@
 	exports.default = Table;
 
 /***/ },
-/* 181 */
+/* 182 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -39347,7 +39353,7 @@
 
 	var _CardsStore2 = _interopRequireDefault(_CardsStore);
 
-	var _uuid = __webpack_require__(182);
+	var _uuid = __webpack_require__(185);
 
 	var _uuid2 = _interopRequireDefault(_uuid);
 
@@ -39451,7 +39457,130 @@
 	exports.default = Dealer;
 
 /***/ },
-/* 182 */
+/* 183 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _CardsStore = __webpack_require__(172);
+
+	var _CardsStore2 = _interopRequireDefault(_CardsStore);
+
+	var _uuid = __webpack_require__(185);
+
+	var _uuid2 = _interopRequireDefault(_uuid);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Player = function (_Component) {
+	  _inherits(Player, _Component);
+
+	  function Player() {
+	    _classCallCheck(this, Player);
+
+	    var _this = _possibleConstructorReturn(this, (Player.__proto__ || Object.getPrototypeOf(Player)).call(this));
+
+	    _this.state = {
+	      playerCards: _CardsStore2.default.getGame('player'),
+	      points: _CardsStore2.default.getGame('points')
+	    };
+	    _this._onChange = _this._onChange.bind(_this);
+	    return _this;
+	  }
+
+	  _createClass(Player, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      _CardsStore2.default.startListening(this._onChange);
+	    }
+	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      _CardsStore2.default.stopListening(this._onChange);
+	    }
+	  }, {
+	    key: '_onChange',
+	    value: function _onChange() {
+	      this.setState({
+	        playerCards: _CardsStore2.default.getGame('player'),
+	        points: _CardsStore2.default.getGame('points')
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var _state = this.state;
+	      var playerCards = _state.playerCards;
+	      var points = _state.points;
+
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          'Player: ',
+	          points,
+	          ' '
+	        ),
+	        _react2.default.createElement(
+	          'table',
+	          { id: 'playerHandTable' },
+	          _react2.default.createElement(
+	            'tbody',
+	            null,
+	            _react2.default.createElement(
+	              'tr',
+	              { className: 'row', id: 'playerCardContainer' },
+	              playerCards.map(function (card, i) {
+	                for (var key in card) {
+
+	                  var img = card[key];
+	                }
+	                return _react2.default.createElement(
+	                  'td',
+	                  { id: 'card' + i, key: i },
+	                  _react2.default.createElement('img', { className: 'playerCards', src: 'http://drive.google.com/uc?export=view&id=' + img, alt: '' })
+	                );
+	              }
+
+	              //end of first map
+	              //end of secondmap
+	              ) //end of return
+
+	            )
+	          )
+	        )
+	      );
+	    } //end of render
+
+	  }]);
+
+	  return Player;
+	}(_react.Component); //end of class
+
+
+	exports.default = Player;
+
+/***/ },
+/* 184 */,
+/* 185 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//     uuid.js
@@ -39462,7 +39591,7 @@
 	// Unique ID creation requires a high quality random # generator.  We feature
 	// detect to determine the best RNG source, normalizing to a function that
 	// returns 128-bits of randomness, since that's what's usually required
-	var _rng = __webpack_require__(183);
+	var _rng = __webpack_require__(186);
 
 	// Maps for number <-> hex string conversion
 	var _byteToHex = [];
@@ -39640,7 +39769,7 @@
 
 
 /***/ },
-/* 183 */
+/* 186 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {
@@ -39679,129 +39808,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 184 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _CardsStore = __webpack_require__(172);
-
-	var _CardsStore2 = _interopRequireDefault(_CardsStore);
-
-	var _uuid = __webpack_require__(182);
-
-	var _uuid2 = _interopRequireDefault(_uuid);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Player = function (_Component) {
-	  _inherits(Player, _Component);
-
-	  function Player() {
-	    _classCallCheck(this, Player);
-
-	    var _this = _possibleConstructorReturn(this, (Player.__proto__ || Object.getPrototypeOf(Player)).call(this));
-
-	    _this.state = {
-	      playerCards: _CardsStore2.default.getGame('player'),
-	      points: _CardsStore2.default.getGame('points')
-	    };
-	    _this._onChange = _this._onChange.bind(_this);
-	    return _this;
-	  }
-
-	  _createClass(Player, [{
-	    key: 'componentDidMount',
-	    value: function componentDidMount() {
-	      _CardsStore2.default.startListening(this._onChange);
-	    }
-	  }, {
-	    key: 'componentWillUnmount',
-	    value: function componentWillUnmount() {
-	      _CardsStore2.default.stopListening(this._onChange);
-	    }
-	  }, {
-	    key: '_onChange',
-	    value: function _onChange() {
-	      this.setState({
-	        playerCards: _CardsStore2.default.getGame('player'),
-	        points: _CardsStore2.default.getGame('points')
-	      });
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      var _state = this.state;
-	      var playerCards = _state.playerCards;
-	      var points = _state.points;
-
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(
-	          'h1',
-	          null,
-	          'Player: ',
-	          points,
-	          ' '
-	        ),
-	        _react2.default.createElement(
-	          'table',
-	          { id: 'playerHandTable' },
-	          _react2.default.createElement(
-	            'tbody',
-	            null,
-	            _react2.default.createElement(
-	              'tr',
-	              { className: 'row', id: 'playerCardContainer' },
-	              playerCards.map(function (card, i) {
-	                for (var key in card) {
-
-	                  var img = card[key];
-	                }
-	                return _react2.default.createElement(
-	                  'td',
-	                  { id: 'card' + i, key: i },
-	                  _react2.default.createElement('img', { className: 'playerCards', src: 'http://drive.google.com/uc?export=view&id=' + img, alt: '' })
-	                );
-	              }
-
-	              //end of first map
-	              //end of secondmap
-	              ) //end of return
-
-	            )
-	          )
-	        )
-	      );
-	    } //end of render
-
-	  }]);
-
-	  return Player;
-	}(_react.Component); //end of class
-
-
-	exports.default = Player;
-
-/***/ },
-/* 185 */
+/* 187 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';

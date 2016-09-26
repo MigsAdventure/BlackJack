@@ -105,14 +105,19 @@ class CardsStore extends EventEmitter {
         }
         return value;
       });
-      console.log("HERE!",totalPoints);
+      for (var i = 0; i <totalPoints.length; i++) {
+        if (totalPoints[i] === 11 && (_game.points + 11) > 21) {
+          totalPoints[i] = 1;
+          console.log("changed to 1: ",totalPoints)
+        }
+      }
+
       return totalPoints.reduce((a,b) => (a+b))
       
       
     }
 
     calcWinner() {
-    
       _game.points > 21 ? setTimeout (() => (alert("YOU LOSE!") ),1000) : null; 
       _game.stand > 21 ? setTimeout(() => (alert("YOU WIN!") ), 1000) : null;
     
